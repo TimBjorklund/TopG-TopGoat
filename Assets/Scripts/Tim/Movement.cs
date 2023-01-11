@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField]
+    KeyCode left;
+    [SerializeField]
+    KeyCode right;
+    public float speed = 4f;
+    public float gravity = 9.82f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetKey(left))
+        {
+            transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+        }
+        else if (Input.GetKey(right))
+        {
+            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+        }
     }
 }
