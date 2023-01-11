@@ -11,7 +11,10 @@ public class MainMenu : MonoBehaviour
     }
     public void QuitGame() //funktion som heter quitgame
     {
-        Application.Quit(); //avsluta applikationen
-        Debug.Log("Greta left the game"); //skriv i logs att spelaren lämnade
+        Application.Quit(); //avslutar applikationen
+        Debug.Log("Greta left the game"); 
+
     }
 }
+
+//Alvin
