@@ -55,7 +55,7 @@ public class HealthBar : MonoBehaviour
             die(); //kör funktionen die
         }
 
-        }
+    }
 }
 
 //Alvin
