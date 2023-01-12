@@ -8,6 +8,10 @@ public class Movement : MonoBehaviour
     KeyCode left;
     [SerializeField]
     KeyCode right;
+    [SerializeField]
+    KeyCode shoot;
+    public GameObject weaponPrefab;
+    public bool haveWeapon = true;
     public float speed = 4f;
     public float gravity = 9.82f;
     // Start is called before the first frame update
@@ -27,6 +31,14 @@ public class Movement : MonoBehaviour
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+        }
+        if (Input.GetKeyDown(shoot))
+        {
+            if (haveWeapon == true)
+            {
+                Instantiate(weaponPrefab, transform.position, Quaternion.identity);
+            }
+
         }
     }
 }
