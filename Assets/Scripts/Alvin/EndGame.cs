@@ -6,7 +6,7 @@ public class EndGame : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        WinGame();
+      
     }
 
     public void WinGame()
