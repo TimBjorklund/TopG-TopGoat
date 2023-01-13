@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
 
-    public int GretaScore;
+    public int GretaScore; 
 
-    public Text scoreText;
-
+    public Text scoreText; 
     // Start is called before the first frame update
     void Start()
     {
@@ -23,3 +22,4 @@ public class Score : MonoBehaviour
     }
 
 }
+//Alvin

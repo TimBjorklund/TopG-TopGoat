@@ -9,9 +9,9 @@ public class EndGame : MonoBehaviour
       
     }
 
-    public void WinGame()
+    public void WinGame() // Funktion som heter Wingame.
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(3); // Laddar Scene 3 i builden.
     }
 }
 //Alvin
