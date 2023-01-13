@@ -19,6 +19,7 @@ public class GameOver : MonoBehaviour
         Application.Quit(); //avsluta applikatione
         Debug.Log("Greta left the game."); //skriv i logs att spelaren lämnade spelet  
     }
+
 }
 
 // Alvin

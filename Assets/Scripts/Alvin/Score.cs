@@ -20,6 +20,6 @@ public class Score : MonoBehaviour
     {
         scoreText.text = "GretaScore";
     }
-
+     
 }
 //Alvin
