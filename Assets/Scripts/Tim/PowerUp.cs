@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    public int CO2;
     public virtual void Start()
     {
         
@@ -21,5 +22,6 @@ public class PowerUp : MonoBehaviour
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
+        CO2++;
     }
 }
