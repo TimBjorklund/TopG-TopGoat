@@ -10,10 +10,22 @@ public class Player : MonoBehaviour
     KeyCode right;
     [SerializeField]
     KeyCode shoot;
+    [SerializeField]
+    KeyCode jump;
+
+    //Jumping
+    [SerializeField] 
+    private Transform groundCheck;
+    [SerializeField] 
+    private LayerMask groundLayer;
+    private Rigidbody2D r2d;
+    public float jumpPower = 4f;
+    public bool dubbleJump;
+
+    //Weapon
     public GameObject weaponPrefab;
     public bool haveWeapon;
     public float speed = 4f;
-    public float gravity = 9.82f;
 
     [SerializeField]
     GameObject lookAt;
@@ -22,7 +34,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        r2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -46,6 +58,23 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(jump))
+        {
+            Debug.Log("at Least trying");
+            if (IsGrounded() || dubbleJump == true)
+            {
+                r2d.velocity = new Vector2(r2d.velocity.x, jumpPower);
+                dubbleJump = !dubbleJump;
+                Debug.Log("JUUUUUMP");
+            }
+        }
+        if (Input.GetKeyUp(jump) && r2d.velocity.y > 0f)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
+        }
+
+
+
         Vector3 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         lookAt.transform.LookAt(mouseScreenPosition);
 
@@ -58,5 +87,9 @@ public class Player : MonoBehaviour
         {
 
         }*/
+    }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 }
