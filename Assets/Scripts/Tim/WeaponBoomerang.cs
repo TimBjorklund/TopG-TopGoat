@@ -34,11 +34,15 @@ public class WeaponBoomerang : MonoBehaviour
         if (hitEnemy == true || towardsPosition == transform.position || hitWall == true)
         {
             r2d.AddForce(player.transform.position*boomerangSpeed - transform.position);
-            Debug.Log("hellllllllllo");
+            Debug.Log("MaxRangeReached!");
         }
         else
         {
             r2d.AddForce(towardsPosition*boomerangSpeed - transform.position);
+        }
+        if (towardsPosition == transform.position)
+        {
+            
         }
 
     }
