@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public GameObject weaponPrefab;
     public bool haveWeapon;
     public float speed = 4f;
+    Vector3 worldMousePosition;
 
     [SerializeField]
     GameObject lookAt;
@@ -58,6 +59,10 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (IsGrounded() && !Input.GetKey(jump))
+        {
+            dubbleJump = false;
+        }
         if (Input.GetKeyDown(jump))
         {
             Debug.Log("at Least trying");
@@ -72,21 +77,19 @@ public class Player : MonoBehaviour
         {
             r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
         }
+        
+
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 0;
+        worldMousePosition = Camera.main.ScreenToWorldPoint(mousePos);
+        lookAt.transform.LookAt(worldMousePosition);
 
 
-
-        Vector3 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        lookAt.transform.LookAt(mouseScreenPosition);
-
-        /*
+        
         Vector3 direction = Vector3.forward;
         Ray playerRay = new Ray(transform.position, transform.TransformDirection(direction * range));
-        Debug.DrawRay(transform.position, transform.TransformDirection(direction * range));*/
+        Debug.DrawRay(transform.position, transform.TransformDirection(direction * range));
 
-        /*if (Physics.Raycast(playerRay, out RaycastHit hit, range))
-        {
-
-        }*/
     }
     private bool IsGrounded()
     {
