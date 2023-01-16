@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
 
+
+    public void Start()
+    {
+        Resume();
+    }
+
+
     public static bool GameIsPaused = false; // Här gör jag en bool som har värdet False.
 
     public GameObject PausedUI; // Här gör jag ett gameobject där jag lägger in canvasen i (där scriptsen finns)
