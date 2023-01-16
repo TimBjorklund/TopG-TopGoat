@@ -7,9 +7,9 @@ public class Pause : MonoBehaviour
 {
 
 
-    void Start()
+    public void Start()
     {
-        
+        Resume();
     }
 
 
