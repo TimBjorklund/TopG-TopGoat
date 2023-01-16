@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 163166263}
   - component: {fileID: 163166262}
   - component: {fileID: 163166261}
-  m_Layer: 0
-  m_Name: Tak (4)
+  m_Layer: 6
+  m_Name: Tak 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ Transform:
   m_LocalScale: {x: 19.387072, y: 21.535967, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &163166261
 BoxCollider2D:
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 220869053}
   - component: {fileID: 220869052}
   - component: {fileID: 220869051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 226495053}
   - component: {fileID: 226495052}
   - component: {fileID: 226495051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 246591427}
   - component: {fileID: 246591426}
   - component: {fileID: 246591425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 246749711}
   - component: {fileID: 246749710}
   - component: {fileID: 246749709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 293165667}
   - component: {fileID: 293165666}
   - component: {fileID: 293165665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,8 +783,8 @@ GameObject:
   - component: {fileID: 305820024}
   - component: {fileID: 305820023}
   - component: {fileID: 305820022}
-  m_Layer: 0
-  m_Name: Tak (2)
+  m_Layer: 6
+  m_Name: Tak 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314060792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Byggnadstak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,13 +909,13 @@ Transform:
   - {fileID: 1677503297}
   - {fileID: 1164986279}
   - {fileID: 305820021}
+  - {fileID: 1694573740}
   - {fileID: 1790684883}
   - {fileID: 163166260}
   - {fileID: 2077736567}
   - {fileID: 1429213700}
   - {fileID: 734369741}
   - {fileID: 335911554}
-  - {fileID: 1694573740}
   - {fileID: 658796515}
   - {fileID: 563743298}
   - {fileID: 226495050}
@@ -929,7 +929,7 @@ Transform:
   - {fileID: 375821825}
   - {fileID: 293165664}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335911553
 GameObject:
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 335911557}
   - component: {fileID: 335911556}
   - component: {fileID: 335911555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +962,7 @@ Transform:
   m_LocalScale: {x: 24.681618, y: 17.033546, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &335911555
 BoxCollider2D:
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 375821828}
   - component: {fileID: 375821827}
   - component: {fileID: 375821826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,67 +1147,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375821824}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &383626210
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1960513855046618572, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.000004512585
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855046618575, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960513855456997120, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 75807bea3a4633349acccce6d48e6aed, type: 3}
 --- !u!1 &563743297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,8 +1159,8 @@ GameObject:
   - component: {fileID: 563743301}
   - component: {fileID: 563743300}
   - component: {fileID: 563743299}
-  m_Layer: 0
-  m_Name: Tak (11)
+  m_Layer: 6
+  m_Name: Tak 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1328,7 +1267,7 @@ GameObject:
   - component: {fileID: 604847834}
   - component: {fileID: 604847833}
   - component: {fileID: 604847832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1375,7 @@ GameObject:
   - component: {fileID: 658796518}
   - component: {fileID: 658796517}
   - component: {fileID: 658796516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1483,7 @@ GameObject:
   - component: {fileID: 734369744}
   - component: {fileID: 734369743}
   - component: {fileID: 734369742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1502,7 @@ Transform:
   m_LocalScale: {x: 24.681618, y: 19.133764, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &734369742
 BoxCollider2D:
@@ -1652,7 +1591,7 @@ GameObject:
   - component: {fileID: 851095848}
   - component: {fileID: 851095847}
   - component: {fileID: 851095846}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,6 +1687,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851095844}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &905679149
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000004512585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021825, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021825, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: jumpPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021825, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: dubbleJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021825, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: haveWeapon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021827, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504460021838, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
 --- !u!1 &1164986278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,8 +1776,8 @@ GameObject:
   - component: {fileID: 1164986282}
   - component: {fileID: 1164986281}
   - component: {fileID: 1164986280}
-  m_Layer: 0
-  m_Name: Tak (1)
+  m_Layer: 6
+  m_Name: Tak 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1868,7 +1884,7 @@ GameObject:
   - component: {fileID: 1429102174}
   - component: {fileID: 1429102173}
   - component: {fileID: 1429102172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1976,7 +1992,7 @@ GameObject:
   - component: {fileID: 1429213703}
   - component: {fileID: 1429213702}
   - component: {fileID: 1429213701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +2011,7 @@ Transform:
   m_LocalScale: {x: 24.782541, y: 17.046965, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1429213701
 BoxCollider2D:
@@ -2084,8 +2100,8 @@ GameObject:
   - component: {fileID: 1677503300}
   - component: {fileID: 1677503299}
   - component: {fileID: 1677503298}
-  m_Layer: 0
-  m_Name: Tak
+  m_Layer: 6
+  m_Name: Tak 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2192,8 +2208,8 @@ GameObject:
   - component: {fileID: 1694573743}
   - component: {fileID: 1694573742}
   - component: {fileID: 1694573741}
-  m_Layer: 0
-  m_Name: Tak (9)
+  m_Layer: 6
+  m_Name: Tak 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2211,7 +2227,7 @@ Transform:
   m_LocalScale: {x: 6.5919547, y: 22.934204, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1694573741
 BoxCollider2D:
@@ -2300,8 +2316,8 @@ GameObject:
   - component: {fileID: 1790684886}
   - component: {fileID: 1790684885}
   - component: {fileID: 1790684884}
-  m_Layer: 0
-  m_Name: Tak (3)
+  m_Layer: 6
+  m_Name: Tak 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2319,7 +2335,7 @@ Transform:
   m_LocalScale: {x: 28.241009, y: 18.881578, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1790684884
 BoxCollider2D:
@@ -2408,7 +2424,7 @@ GameObject:
   - component: {fileID: 1880311354}
   - component: {fileID: 1880311353}
   - component: {fileID: 1880311352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tak (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2516,8 +2532,8 @@ GameObject:
   - component: {fileID: 2077736570}
   - component: {fileID: 2077736569}
   - component: {fileID: 2077736568}
-  m_Layer: 0
-  m_Name: Tak (5)
+  m_Layer: 6
+  m_Name: Tak 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2535,7 +2551,7 @@ Transform:
   m_LocalScale: {x: 22.855106, y: 21.301777, z: 10}
   m_Children: []
   m_Father: {fileID: 314060792}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2077736568
 BoxCollider2D:
