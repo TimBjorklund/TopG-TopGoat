@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public bool haveWeapon;
     public float speed = 4f;
     Vector3 worldMousePosition;
+    Vector3 lookAtPosition;
 
     [SerializeField]
     GameObject lookAt;
@@ -77,12 +78,13 @@ public class Player : MonoBehaviour
         {
             r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
         }
-        
+
 
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
         worldMousePosition = Camera.main.ScreenToWorldPoint(mousePos);
-        lookAt.transform.LookAt(worldMousePosition);
+        lookAtPosition = new Vector3(worldMousePosition.x, worldMousePosition.y, 0);
+        lookAt.transform.LookAt(lookAtPosition);
 
 
         

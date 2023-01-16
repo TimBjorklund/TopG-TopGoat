@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class RayTest : MonoBehaviour
 {
-    [SerializeField]
-    GameObject lookAt;
     public Vector3 worldMousePosition;
-    public float range;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +17,6 @@ public class RayTest : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
         worldMousePosition = Camera.main.ScreenToWorldPoint(mousePos);
-        transform.position = worldMousePosition;
+        transform.position = new Vector3(worldMousePosition.x, worldMousePosition.y, 0);
     }
 }
