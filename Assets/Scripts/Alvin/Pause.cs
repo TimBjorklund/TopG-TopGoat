@@ -7,7 +7,7 @@ public class Pause : MonoBehaviour
 {
 
 
-    public void Start()
+    public void Start() // Här gör jag en funktion vid namn start
     {
         Resume();
     }
