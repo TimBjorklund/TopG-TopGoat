@@ -14,7 +14,7 @@ public class EndGame : MonoBehaviour
     {
         SceneManager.LoadScene(3); // Laddar Scene 3 i builden.
     }
-    void die() //funktion som är att dö
+    public void Die() //funktion som är att dö
     {
        
         SceneManager.LoadScene(4); //ladda game over scene
