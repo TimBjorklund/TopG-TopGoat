@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     private Animator anim;
 
     private health playerhealth;
-
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -31,6 +30,7 @@ public class Enemy : MonoBehaviour
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("");
+                
             }
         }
 
@@ -43,6 +43,8 @@ public class Enemy : MonoBehaviour
         if (hit.collider != null)
         {
             playerhealth = hit.transform.GetComponent<health>();
+            playerhealth.currentHealth -= 1;
+            print("damage");
         }
 
         return hit.collider != null;
@@ -55,6 +57,7 @@ public class Enemy : MonoBehaviour
     }
     private void DamagePlayer()
     {
+        print("attack!!!");
         if (PlayerInSight())
         {
           
