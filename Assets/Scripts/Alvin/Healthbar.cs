@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class HealthBar : MonoBehaviour
+public class Healthbar : MonoBehaviour
 {
     public Slider slider;
     public Gradient gradient;
@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour
     public float health;
     public float currentHealth;
     public float maxHealth = 100f;
-    public HealthBar healthbar;
+    public Healthbar healthbar;
     public float damage = 0.08f;
 
     void Start()
