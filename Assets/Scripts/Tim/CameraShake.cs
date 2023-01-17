@@ -25,7 +25,7 @@ public class CameraShake : MonoBehaviour
         Vector3 startPosition = transform.position;
         //Skulle koden använts förut skulle inte den fungera eftersom att tiden hade varit över duration.
         float elapsedTime = 0f;
-        //När elapsedTime är mindre än den insatta durationen kommer koden under vara igång.
+        //När  elapsedTime är mindre än den insatta durationen kommer koden under vara igång.
         while (elapsedTime < duration)
         {
             //plussar på Time.deltaTime på elapsedTime.

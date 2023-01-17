@@ -37,8 +37,7 @@ public class WeaponBoomerang : MonoBehaviour
         timer2 += Time.deltaTime;
         if (hitEnemy == true || timer2 >= 1 || hitWall == true)
         {
-            r2d.AddForce(player.transform.position*boomerangSpeed - transform.position*boomerangSpeed);
-            Debug.Log("MaxRangeReached!");
+            r2d.AddForce(player.transform.position*boomerangSpeed/2 - transform.position*boomerangSpeed/2);
         }
         else if (timer2 >= 10)
         {
@@ -47,7 +46,6 @@ public class WeaponBoomerang : MonoBehaviour
         else
         {
             r2d.AddForce(towardsPosition*boomerangSpeed - transform.position*boomerangSpeed);
-            Debug.Log("InteMaxRangeReached");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
