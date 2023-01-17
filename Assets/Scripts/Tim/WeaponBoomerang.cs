@@ -9,14 +9,16 @@ public class WeaponBoomerang : MonoBehaviour
     public bool hitWall;
     public bool hitEnemy;
     public bool maxRange;
-    public float timer = 0;
+    private float timer = 0;
+    public float timer2 = 0;
     Player player;
     [SerializeField]
-    Vector3 towardsPosition;
-    [SerializeField]
-    GameObject towardsPositionStart;
+    private Vector3 towardsPosition;
+    private GameObject towardsPositionStart;
     [SerializeField]
     float boomerangSpeed = 1;
+    [SerializeField]
+    GameObject Spinning;
 
     // Start is called before the first frame update
     void Start()
@@ -30,21 +32,23 @@ public class WeaponBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Spinning.transform.eulerAngles += new Vector3(0,0,200) * Time.deltaTime;
         timer += Time.deltaTime;
-        if (hitEnemy == true || towardsPosition == transform.position || hitWall == true)
+        timer2 += Time.deltaTime;
+        if (hitEnemy == true || timer2 >= 1 || hitWall == true)
         {
-            r2d.AddForce(player.transform.position*boomerangSpeed - transform.position);
+            r2d.AddForce(player.transform.position*boomerangSpeed - transform.position*boomerangSpeed);
             Debug.Log("MaxRangeReached!");
+        }
+        else if (timer2 >= 10)
+        {
+            transform.position = player.transform.position;
         }
         else
         {
-            r2d.AddForce(towardsPosition*boomerangSpeed - transform.position);
+            r2d.AddForce(towardsPosition*boomerangSpeed - transform.position*boomerangSpeed);
+            Debug.Log("InteMaxRangeReached");
         }
-        if (towardsPosition == transform.position)
-        {
-            
-        }
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

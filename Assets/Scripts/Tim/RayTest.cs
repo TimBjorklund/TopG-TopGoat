@@ -15,7 +15,6 @@ public class RayTest : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 0;
         worldMousePosition = Camera.main.ScreenToWorldPoint(mousePos);
         transform.position = new Vector3(worldMousePosition.x, worldMousePosition.y, 0);
     }
