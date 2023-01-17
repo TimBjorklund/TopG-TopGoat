@@ -12,13 +12,13 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = GetComponent<Text>();
+        scoreText = GetComponent<Text>(); //här gör jag så den hämtar competenten text.
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "GretaScore";
+        scoreText.text = "GretaScore"; 
     }
      
 }
