@@ -42,14 +42,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+            if (AudioManager.instance.isPlaying == false)
+            {
+                AudioManager.instance.Play("Walking");
+            }
+            
         }
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+            if (AudioManager.instance.isPlaying == false)
+            {
+                AudioManager.instance.Play("Walking");
+            }
         }
         if (Input.GetKeyDown(shoot))
         {
@@ -87,7 +97,6 @@ public class Player : MonoBehaviour
         lookAt.transform.LookAt(lookAtPosition);
 
 
-        
         Vector3 direction = Vector3.forward;
         Ray playerRay = new Ray(transform.position, transform.TransformDirection(direction * range));
         Debug.DrawRay(transform.position, transform.TransformDirection(direction * range));
