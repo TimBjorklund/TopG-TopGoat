@@ -401,25 +401,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3975208424215371620, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199437854411210388, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
-      propertyPath: m_TagString
-      value: TowardsPosition
-      objectReference: {fileID: 0}
     - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_LocalPosition.x
@@ -528,8 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2a6306fa823824ab5a358e79ec0416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CO2: 0
   Test: 0
+  Score: 0
 --- !u!61 &2113161766
 BoxCollider2D:
   m_ObjectHideFlags: 0
