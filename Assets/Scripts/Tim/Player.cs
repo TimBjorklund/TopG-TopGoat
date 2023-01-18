@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     GameObject lookAt;
 
     public float range = 4;
+    public Healthbar healthbar;
+
     // Start is called before the first frame update
     void Start()
     {

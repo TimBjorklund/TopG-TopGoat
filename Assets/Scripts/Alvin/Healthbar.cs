@@ -11,9 +11,9 @@ public class Healthbar : MonoBehaviour
    
     public float health;
     public float currentHealth;
-    public float maxHealth = 100f;
-    public Healthbar healthbar;
+    public float maxHealth = 10f;
     public float damage = 10f;
+    public Healthbar healthbar;
 
     void Start()
     {
