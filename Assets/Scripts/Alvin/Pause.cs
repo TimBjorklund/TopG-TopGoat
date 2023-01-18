@@ -50,8 +50,7 @@ public class Pause : MonoBehaviour
 
     public void QuitGame() //funktion quitgame
     {
-        Application.Quit(); //avsluta applikatione
-        Debug.Log("Greta left the game."); //skriv i logs att spelaren lämnade spelet  
+        Application.Quit(); //avsluta applikationen  
     }
 
 }
