@@ -36,7 +36,7 @@ public class WeaponBoomerang : MonoBehaviour
         Spinning.transform.eulerAngles += new Vector3(0,0,200) * Time.deltaTime;
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
-        if (timer2 >= 4)
+        if (timer2 >= 6)
         {
             r2d.velocity = Vector3.zero;
             transform.position += returnLength/20;
