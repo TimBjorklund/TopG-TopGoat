@@ -9,12 +9,23 @@ public class EndGame : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            
             SceneManager.LoadScene(2);
             Destroy(gameObject);
         }
+        //^^
+      
+        
+        //Här gör jag en collison så när gubben som har taggen Win coliderar med ett gameobject som har taggen player så kommer det upp en win scene.
+        else if (collision.gameObject.tag == "Win")
+        {
+            SceneManager.LoadScene(3);
+            Destroy(gameObject);
+        }
     }
-    //^^
+         //^^
+
+
+
     public void WinGame() // Funktion som heter Wingame.
     {
         SceneManager.LoadScene(3); // Laddar Scene 3 i builden.
