@@ -19,7 +19,7 @@ public class WeaponBoomerang : MonoBehaviour
     float boomerangSpeed = 1;
     [SerializeField]
     GameObject Spinning;
-
+    private Vector3 returnLength;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +32,14 @@ public class WeaponBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        returnLength = player.transform.position - transform.position;
         Spinning.transform.eulerAngles += new Vector3(0,0,200) * Time.deltaTime;
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
         if (timer2 >= 4)
         {
-            transform.LookAt(player.transform);
-            r2d.AddForce(player.transform.position * boomerangSpeed / 2 - transform.position * boomerangSpeed / 2);
+            r2d.velocity = Vector3.zero;
+            transform.position += returnLength/20;
         }
         else if (hitEnemy == true || timer2 >= 1 || hitWall == true)
         {
