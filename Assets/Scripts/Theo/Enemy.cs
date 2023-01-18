@@ -4,35 +4,41 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Jag lämnar min dator olåst i en korridor på skolan")]
     [SerializeField] private float attackcooldown;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCoxColider;
-    private float cooldownTimer = Mathf.Infinity;
+    private float cooldownTimer = 0;
     [SerializeField] private LayerMask PlayerLayer;
 
     private Animator anim;
     private health playerhealth;
 
     private EnemyPatrol enemyPatrol;
+
+    Healthbar health;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        health = FindObjectOfType<Healthbar>();
     }
 
     private void Update()
     {
+         
         cooldownTimer += Time.deltaTime;
 
         if (PlayerInSight())
         {
             if (cooldownTimer >= attackcooldown)
             {
+                print("attack");
                 cooldownTimer = 0;
-                anim.SetTrigger("attack!");
-                
+                anim.SetTrigger("melee");
+                health.health -= 1;
             }
         }
 
@@ -41,17 +47,21 @@ public class Enemy : MonoBehaviour
     }
     private bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCoxColider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, 
-        new Vector3(boxCoxColider.bounds.size.x * range, boxCoxColider.bounds.size.y, boxCoxColider.bounds.size.z), 0, Vector2.left, 0, PlayerLayer);
+       Collider2D hit = Physics2D.OverlapBox(boxCoxColider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+        new Vector3(boxCoxColider.bounds.size.x * range, boxCoxColider.bounds.size.y, boxCoxColider.bounds.size.z), 0, PlayerLayer);
 
-        if (hit.collider != null)
+        if (hit != null)
         {
-            playerhealth = hit.transform.GetComponent<health>();
-            playerhealth.currentHealth -= 1;
+            /* playerhealth = hit.transform.GetComponent<health>();
+             playerhealth.currentHealth -= 1;*/
+            
             print("damage");
+            return true;
+        }else
+        {
+            return false;
         }
 
-        return hit.collider != null;
     }
     private void OnDrawGizmos()
     {
@@ -61,11 +71,8 @@ public class Enemy : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        print("attack!!!");
-        if (PlayerInSight())
-        {
-          
-        }
+       
+        
     }
 }
 
