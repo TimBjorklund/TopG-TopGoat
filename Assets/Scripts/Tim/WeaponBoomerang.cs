@@ -35,13 +35,14 @@ public class WeaponBoomerang : MonoBehaviour
         Spinning.transform.eulerAngles += new Vector3(0,0,200) * Time.deltaTime;
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
-        if (hitEnemy == true || timer2 >= 1 || hitWall == true)
+        if (timer2 >= 4)
         {
-            r2d.AddForce(player.transform.position*boomerangSpeed/2 - transform.position*boomerangSpeed/2);
+            transform.LookAt(player.transform);
+            r2d.AddForce(player.transform.position * boomerangSpeed / 2 - transform.position * boomerangSpeed / 2);
         }
-        else if (timer2 >= 10)
+        else if (hitEnemy == true || timer2 >= 1 || hitWall == true)
         {
-            transform.position = player.transform.position;
+            r2d.AddForce(player.transform.position * boomerangSpeed / 2 - transform.position * boomerangSpeed / 2);
         }
         else
         {
@@ -65,3 +66,4 @@ public class WeaponBoomerang : MonoBehaviour
         }
     }
 }
+// Tim.B
