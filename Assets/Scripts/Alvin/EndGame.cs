@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
-    
-    void OnTriggerEnter(Collider other)
+
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        WinGame();
+        if (collision.gameObject.tag == "Player")
+        {
+            
+            SceneManager.LoadScene(2);
+            Debug.Log("Greta dog");
+            Destroy(gameObject);
+        }
     }
-   
+
     public void WinGame() // Funktion som heter Wingame.
     {
         SceneManager.LoadScene(3); // Laddar Scene 3 i builden.

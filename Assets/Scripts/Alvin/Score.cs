@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Score : MonoBehaviour
 {
 
-    public int GretaScore; 
+    public static int scored;
 
-    public Text scoreText; 
-    // Start is called before the first frame update
+
+    public Text scoreText;
+
+
     void Start()
     {
-        scoreText = GetComponent<Text>(); //här gör jag så den hämtar competenten text.
+        scoreText = GetComponent<Text>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        scoreText.text = "GretaScore"; 
+        scoreText.text = scored.ToString();
     }
-     
+
 }
 //Alvin
