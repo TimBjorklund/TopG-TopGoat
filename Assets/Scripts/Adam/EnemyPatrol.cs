@@ -53,7 +53,7 @@ public class EnemyPatrol : MonoBehaviour
     private void DirectionChange()
     {
         anim.SetBool("moving", false);
-
+        
         idleTimer += Time.deltaTime; //Gör så att man kan välja hur länga man vill att enemy ska stå still när den når en patrulleringspunkt - Adam
 
         if(idleTimer > idleDuration)

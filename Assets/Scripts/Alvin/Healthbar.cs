@@ -13,7 +13,7 @@ public class Healthbar : MonoBehaviour
     public float currentHealth;
     public float maxHealth = 100f;
     public Healthbar healthbar;
-    public float damage = 0.08f;
+    public float damage = 10f;
 
     void Start()
     {
@@ -38,7 +38,7 @@ public class Healthbar : MonoBehaviour
         fill.color = gradient.Evaluate(slider.normalizedValue); //fyll i 
     }
 
-    void TakeDamage(float damage) //funktion som heter takedamage
+    public void TakeDamage(float damage) //funktion som heter takedamage
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
@@ -50,9 +50,9 @@ public class Healthbar : MonoBehaviour
     void Update()
     {
 
-        if (currentHealth <= 0) //om hp är mindre än ELLER LIKA MED 0
+        if (health <= 0) //om hp är mindre än ELLER LIKA MED 0
         {
-            die(); //kör funktionen die
+             Invoke("die", 0.7f);
         }
 
     }
