@@ -4,18 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    //Här gör jag en collison så när gubben som har taggen player coliderar med ett gameobject som har taggen player så destroyas greta och loadar scene 2 i builden.
+    public void OnCollisionEnter2D(Collision2D collision) 
     {
         if (collision.gameObject.tag == "Player")
         {
             
             SceneManager.LoadScene(2);
-            Debug.Log("Greta dog");
             Destroy(gameObject);
         }
     }
-
+    //^^
     public void WinGame() // Funktion som heter Wingame.
     {
         SceneManager.LoadScene(3); // Laddar Scene 3 i builden.
