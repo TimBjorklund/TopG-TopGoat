@@ -17,7 +17,7 @@ public class EndGame : MonoBehaviour
     public void Die() //funktion som är att dö
     {
        
-        SceneManager.LoadScene(4); //ladda game over scene
+        SceneManager.LoadScene(2); //ladda game over scene
     }
 }
 //Alvin
