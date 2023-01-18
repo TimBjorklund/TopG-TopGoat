@@ -13,6 +13,13 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float speed;
     private Vector3 initScale;
     private bool movingLeft;
+
+    [Header("Idle Behaviour")]
+    [SerializeField] private float idleDuration;
+    private float idleTimer;
+
+    [Header("Enemy Animator")]
+    [SerializeField] private Animator anim;
     private void Awake()
     {
         initScale = enemy.localScale;
@@ -38,14 +45,25 @@ public class EnemyPatrol : MonoBehaviour
             
         }
     }
+    private void OnDisable()
+    {
+        anim.SetBool("moving", false); //När enemy slutar patrullera så slutar "moving" animationen - Adam
+    }
 
     private void DirectionChange()
     {
-        movingLeft = !movingLeft;
+        anim.SetBool("moving", false);
+
+        idleTimer += Time.deltaTime; //Gör så att man kan välja hur länga man vill att enemy ska stå still när den når en patrulleringspunkt - Adam
+
+        if(idleTimer > idleDuration)
+            movingLeft = !movingLeft;
     }
     private void  MoveInDirection(int _direction) //Får fienden att röra sig åt den riktningen - Adam
-
     {
+        idleTimer = 0;
+        anim.SetBool("moving", true);
+
         //Får fienden att kolla åt riktningen - Adam
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction,
             initScale.y, initScale.z);

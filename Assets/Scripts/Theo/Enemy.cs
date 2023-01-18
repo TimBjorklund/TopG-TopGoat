@@ -13,11 +13,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private LayerMask PlayerLayer;
 
     private Animator anim;
-
     private health playerhealth;
+
+    private EnemyPatrol enemyPatrol;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
     private void Update()
@@ -29,11 +31,13 @@ public class Enemy : MonoBehaviour
             if (cooldownTimer >= attackcooldown)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("");
+                anim.SetTrigger("attack!");
                 
             }
         }
 
+        if (enemyPatrol != null)
+            enemyPatrol.enabled = !PlayerInSight(); //GÖr så att enemy patrullerar när den inte ser player - Adam
     }
     private bool PlayerInSight()
     {
