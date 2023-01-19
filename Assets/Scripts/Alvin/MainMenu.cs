@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame() //funktion som heter playgame
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //ladda in nästa scene från build settings
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single); //ladda in nästa scene från build settings
     }
     public void QuitGame() //funktion som heter quitgame
     {
