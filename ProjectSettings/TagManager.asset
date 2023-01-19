@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - TowardsPosition
-  - barier
+  - Bottle
   layers:
   - Default
   - TransparentFX

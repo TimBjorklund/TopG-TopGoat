@@ -7,10 +7,13 @@ public class BossThrow : MonoBehaviour
     private float timer;
     [SerializeField]
     private GameObject bottlePrefab;
+    private GameObject arm;
+    private GameObject Aim;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -20,7 +23,8 @@ public class BossThrow : MonoBehaviour
         if (timer >= 5)
         {
             timer = 0;
-            Instantiate(bottlePrefab, transform.position, Quaternion.identity);
+            Instantiate(bottlePrefab, arm.transform.position, Quaternion.identity);
+            Aim.transform.LookAt(player.transform.position);
         }
     }
 }
