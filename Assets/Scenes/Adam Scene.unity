@@ -152,15 +152,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_RootOrder
@@ -369,7 +373,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 457461612}
   health: 3
-  currentHealth: 3
   maxHealth: 3
   damage: 5
   healthbar: {fileID: 552816528}
