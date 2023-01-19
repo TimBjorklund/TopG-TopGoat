@@ -4,23 +4,43 @@ using UnityEngine;
 
 public class Bottle : MonoBehaviour
 {
-    private Rigidbody2D r2d;
-    Player player;
     [SerializeField]
     private GameObject spinning;
-    private Vector3 aimedLocation;
+    private Vector3 direction;
+    public Vector3 startingPos;
+    [SerializeField]
+    private GameObject aim;
+    private Vector3 aimedPos;
+
+    private Rigidbody2D r2d;
+    public Vector3 currentForce;
+    public float gravity;
+    public float Mass;
     // Start is called before the first frame update
     void Start()
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
-        player = FindObjectOfType<Player>();
-        aimedLocation = player.transform.position;
+        aim = GameObject.FindGameObjectWithTag("AndrewAim");
+        aimedPos = aim.transform.position;
+        startingPos = transform.position;
+        direction = aimedPos - startingPos;
+        Mass = r2d.mass;
+        gravity = r2d.gravityScale;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         spinning.transform.eulerAngles += new Vector3(0, 0, 400) * Time.deltaTime;
+        transform.position += direction/10;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
 
+        }
+        Destroy(gameObject);
     }
 }
