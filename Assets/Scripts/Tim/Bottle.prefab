@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3240430678875140139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10677.702}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5649354816027097134}
@@ -92,6 +92,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5649354816027097134}
   - component: {fileID: 1799554809506676435}
+  - component: {fileID: -3040075997429783749}
+  - component: {fileID: 395120053041172539}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Bottle
@@ -127,3 +129,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinning: {fileID: 3240430678875140139}
+  startingPos: {x: 0, y: 0, z: 0}
+  aim: {fileID: 0}
+  currentForce: {x: 0, y: 0, z: 0}
+  gravity: 0
+  Mass: 0
+--- !u!114 &-3040075997429783749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011913873310279619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2ad79f1be0a9e44b18c24d7ffb61d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovingEffect: 0
+  Camera: {fileID: 0}
+--- !u!70 &395120053041172539
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011913873310279619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.01, y: 0.1}
+  m_Direction: 0
