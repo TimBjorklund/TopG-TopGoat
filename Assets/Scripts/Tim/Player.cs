@@ -49,7 +49,11 @@ public class Player : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
-
+            if (AudioManager.instance.isPlaying == false)
+            {
+                AudioManager.instance.Play("Walking");
+            }
+            
         }
         else if (Input.GetKey(right))
         {

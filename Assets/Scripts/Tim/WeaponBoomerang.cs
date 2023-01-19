@@ -50,11 +50,13 @@ public class WeaponBoomerang : MonoBehaviour
             r2d.AddForce(towardsPosition*boomerangSpeed - transform.position*boomerangSpeed);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("boomerang touch");
         if (collision.gameObject.tag == "Enemy")
         {
-            score++;
+            print("Attack");
+           collision.gameObject.GetComponent<health>().TakeDamage(2);
         } 
     }
     private void OnTriggerStay2D(Collider2D collision)

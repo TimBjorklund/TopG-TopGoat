@@ -721,6 +721,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6859535808016566489, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: range
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859535808016566489, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: colliderDistance
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859535808016566491, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.037175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859535808016566491, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.1117477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859535808016566491, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.0371757
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859535808016566491, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.32
+      objectReference: {fileID: 0}
     - target: {fileID: 6859535808084958384, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
       propertyPath: m_RootOrder
       value: 4
