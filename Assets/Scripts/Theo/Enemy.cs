@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
                 print("attack");
                 cooldownTimer = 0;
                 anim.SetTrigger("melee");
-                health.health -= 1;
+                health.TakeDamage(1);
             }
         }
 
