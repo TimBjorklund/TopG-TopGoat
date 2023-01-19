@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: c187fa092b845a842b33df348a1ad0cc
+guid: eb4465f1fb7a76a4b87f99075cfa8cb0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2236644525151902733
-    second: New Piskel (36)_0
+      213: 5000927251509650613
+    second: Back_0
   - first:
-      213: 8062031346683650994
-    second: New Piskel (36)_1
+      213: 564042922023100985
+    second: Back_1
   - first:
-      213: 3111345159246988805
-    second: New Piskel (36)_2
+      213: -6931248352422374901
+    second: Back_2
   - first:
-      213: 6293285447774870347
-    second: New Piskel (36)_3
-  - first:
-      213: -8217669965516607329
-    second: New Piskel (36)_4
-  - first:
-      213: -1764754619522110643
-    second: New Piskel (36)_5
-  - first:
-      213: -2286858667380970680
-    second: New Piskel (36)_6
-  - first:
-      213: 7147056956343333718
-    second: New Piskel (36)_7
+      213: 4990789188432626572
+    second: Back_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -111,59 +99,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (36)_0
+      name: Back_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 137
-        width: 38
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f3af7597a7d5f0e0800000000000000
-      internalID: -2236644525151902733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (36)_1
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 137
-        width: 39
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b3a42b9bc612ef60800000000000000
-      internalID: 8062031346683650994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (36)_2
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 137
+        x: 12
+        y: 87
         width: 40
-        height: 50
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,83 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5064c8e00f7bd2b20800000000000000
-      internalID: 3111345159246988805
+      spriteID: 5b4adc5d6dcd66540800000000000000
+      internalID: 5000927251509650613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (36)_3
+      name: Back_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 73
-        width: 38
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4b91c085cd365750800000000000000
-      internalID: 6293285447774870347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (36)_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 73
-        width: 38
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f907cf794b8f4fd80800000000000000
-      internalID: -8217669965516607329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (36)_5
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 73
-        width: 39
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4ba7ab06055287e0800000000000000
-      internalID: -1764754619522110643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (36)_6
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 9
+        x: 76
+        y: 87
         width: 40
-        height: 50
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84beb3788227340e0800000000000000
-      internalID: -2286858667380970680
+      spriteID: 932a2459c02e3d700800000000000000
+      internalID: 564042922023100985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (36)_7
+      name: Back_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 9
-        width: 38
-        height: 51
+        x: 12
+        y: 23
+        width: 40
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +171,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65334506f627f2360800000000000000
-      internalID: 7147056956343333718
+      spriteID: b025ad7c8524fcf90800000000000000
+      internalID: -6931248352422374901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 23
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8303651358d24540800000000000000
+      internalID: 4990789188432626572
       vertices: []
       indices: 
       edges: []

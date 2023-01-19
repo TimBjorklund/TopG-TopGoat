@@ -38,7 +38,7 @@ public class Healthbar : MonoBehaviour
         Debug.Log("anpassning till bar");
     }
 
-    public void TakeDamage(float damage) //funktion som heter takedamage
+    public void TakeDamage(float damage) //i denna funktion gör vi så att health minskas och att slidervalue minskas och då sätter vi sethelth till nuvarande hpn.
     {
         health -= damage;
         slider.value -= damage;

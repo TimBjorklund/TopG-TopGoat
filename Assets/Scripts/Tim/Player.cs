@@ -50,7 +50,6 @@ public class Player : MonoBehaviour
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
 
-
         }
         else if (Input.GetKey(right))
         {

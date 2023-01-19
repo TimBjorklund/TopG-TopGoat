@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//Jag hann inte fixa score ui eller liknade har bara koden men det kommer impleteras vi jobbar med detta senare.
 public class Score : MonoBehaviour
 {
 
@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        scoreText = GetComponent<Text>();
+        scoreText = GetComponent<Text>();// Denna betyder att scoretexten är samma sak som när vi hitta compenenten text där det står poängen.
     }
 
 
