@@ -1851,10 +1851,10 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   fill: {fileID: 1754797774}
-  health: 10
-  currentHealth: 10
-  maxHealth: 10
-  damage: 10
+  health: 4
+  currentHealth: 0
+  maxHealth: 4
+  damage: 1
   healthbar: {fileID: 603562873}
 --- !u!114 &603562874
 MonoBehaviour:
@@ -5577,7 +5577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9528302, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

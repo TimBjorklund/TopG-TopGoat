@@ -607,8 +607,8 @@ MonoBehaviour:
   health: 0
   currentHealth: 0
   maxHealth: 100
-  healthbar: {fileID: 2028920829}
   damage: 10
+  healthbar: {fileID: 2028920829}
 --- !u!114 &2028920830
 MonoBehaviour:
   m_ObjectHideFlags: 0
