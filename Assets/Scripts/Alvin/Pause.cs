@@ -30,7 +30,7 @@ public class Pause : MonoBehaviour
             }
         }
     }
-    public void Resume () // Om boolen aktiveras så e den false o då är tiden 1. samt spelet e pausat
+    public void Resume () // Om boolen aktiveras så e den false. samt spelet e pausat
     {
         PausedUI.SetActive(false);
         Time.timeScale = 1f;
