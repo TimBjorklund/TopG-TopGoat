@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: df0806d86aaf2194eba9731a7c83ff3f
+guid: 873307a5fc3a6ac47a0d794d0277f7f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7599784438742660884
-    second: Take damage animation_0
+      213: -8621708248124473213
+    second: "F\xE5 vapen_0"
   - first:
-      213: 510298799644131066
-    second: Take damage animation_1
+      213: -3587937923108576597
+    second: "F\xE5 vapen_1"
   - first:
-      213: 1386413203179416613
-    second: Take damage animation_2
+      213: 3001381723735888925
+    second: "F\xE5 vapen_2"
   - first:
-      213: 298049778659790086
-    second: Take damage animation_3
+      213: -521940765394280177
+    second: "F\xE5 vapen_3"
   - first:
-      213: -2057292624571542318
-    second: Take damage animation_4
+      213: -7245466070345184153
+    second: "F\xE5 vapen_4"
   - first:
-      213: -3958891282632280806
-    second: Take damage animation_5
+      213: -6380554787076583066
+    second: "F\xE5 vapen_5"
+  - first:
+      213: 8323232893441582693
+    second: "F\xE5 vapen_6"
+  - first:
+      213: -4729220193348362651
+    second: "F\xE5 vapen_7"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Take damage animation_0
+      name: "F\xE5 vapen_0"
       rect:
         serializedVersion: 2
-        x: 150
-        y: 1370
-        width: 390
-        height: 510
+        x: 15
+        y: 137
+        width: 39
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce8c33f7154288690800000000000000
-      internalID: -7599784438742660884
+      spriteID: 3804c71370a895880800000000000000
+      internalID: -8621708248124473213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take damage animation_1
+      name: "F\xE5 vapen_1"
       rect:
         serializedVersion: 2
-        x: 790
-        y: 1370
-        width: 390
-        height: 510
+        x: 79
+        y: 137
+        width: 39
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afeb81afd02f41700800000000000000
-      internalID: 510298799644131066
+      spriteID: ba2e5f8f775153ec0800000000000000
+      internalID: -3587937923108576597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take damage animation_2
+      name: "F\xE5 vapen_2"
       rect:
         serializedVersion: 2
-        x: 120
-        y: 730
-        width: 400
-        height: 510
+        x: 143
+        y: 137
+        width: 39
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52cab6776778d3310800000000000000
-      internalID: 1386413203179416613
+      spriteID: d1490a696cc07a920800000000000000
+      internalID: 3001381723735888925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take damage animation_3
+      name: "F\xE5 vapen_3"
       rect:
         serializedVersion: 2
-        x: 770
-        y: 730
-        width: 400
-        height: 510
+        x: 10
+        y: 73
+        width: 50
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d866ec1b2e22400800000000000000
-      internalID: 298049778659790086
+      spriteID: f01e0e4a3a1b1c8f0800000000000000
+      internalID: -521940765394280177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take damage animation_4
+      name: "F\xE5 vapen_4"
       rect:
         serializedVersion: 2
-        x: 130
-        y: 90
-        width: 410
-        height: 510
+        x: 79
+        y: 73
+        width: 39
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d4d16902470373e0800000000000000
-      internalID: -2057292624571542318
+      spriteID: 76c0ee44ffee27b90800000000000000
+      internalID: -7245466070345184153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take damage animation_5
+      name: "F\xE5 vapen_5"
       rect:
         serializedVersion: 2
-        x: 770
-        y: 90
-        width: 410
-        height: 510
+        x: 143
+        y: 73
+        width: 39
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +234,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a15ff428a513f09c0800000000000000
-      internalID: -3958891282632280806
+      spriteID: 661d16e0a37b377a0800000000000000
+      internalID: -6380554787076583066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "F\xE5 vapen_6"
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 9
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566ae6cd730128370800000000000000
+      internalID: 8323232893441582693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "F\xE5 vapen_7"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 9
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56eddd66a4f6e5eb0800000000000000
+      internalID: -4729220193348362651
       vertices: []
       indices: 
       edges: []

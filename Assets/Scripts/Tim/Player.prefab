@@ -350,6 +350,7 @@ MonoBehaviour:
   speed: 4
   lookAt: {fileID: 7397906858456700647}
   range: 4
+  healthbar: {fileID: 0}
 --- !u!50 &7310214504460021838
 Rigidbody2D:
   serializedVersion: 4

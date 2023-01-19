@@ -130,6 +130,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7310214504334791309, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791309, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791309, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791309, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4035959289877228764, guid: e2b587d87e180c2479af8b92e3c147be, type: 3}
+    - target: {fileID: 7310214504334791309, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310214504334791311, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7310214504460021824, guid: 144448fd5a41a414fa189d128cdedb05, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -339,8 +371,8 @@ MonoBehaviour:
   health: 3
   currentHealth: 3
   maxHealth: 3
-  healthbar: {fileID: 552816528}
   damage: 5
+  healthbar: {fileID: 552816528}
 --- !u!114 &552816529
 MonoBehaviour:
   m_ObjectHideFlags: 0
