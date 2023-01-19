@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public float range = 4;
     public Healthbar healthbar;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,24 +45,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
-            if (AudioManager.instance.isPlaying == false)
-            {
-                AudioManager.instance.Play("Walking");
-            }
-            
+
+
         }
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            if (AudioManager.instance.isPlaying == false)
-            {
-                AudioManager.instance.Play("Walking");
-            }
+
         }
         if (Input.GetKeyDown(shoot))
         {
@@ -75,15 +69,21 @@ public class Player : MonoBehaviour
         if (IsGrounded() && !Input.GetKey(jump))
         {
             dubbleJump = false;
+
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetKeyDown(jump))
         {
             Debug.Log("at Least trying");
             if (IsGrounded() || dubbleJump == true)
             {
+
                 r2d.velocity = new Vector2(r2d.velocity.x, jumpPower);
                 dubbleJump = !dubbleJump;
                 Debug.Log("JUUUUUMP");
+
+                FindObjectOfType<AudioManager>().Play("Jump");
+
             }
         }
         if (Input.GetKeyUp(jump) && r2d.velocity.y > 0f)

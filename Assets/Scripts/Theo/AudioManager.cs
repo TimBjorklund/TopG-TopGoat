@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public bool isPlaying;
-    
+
     void Awake ()
     {
 
@@ -31,10 +31,15 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
-            s.source.pitch = s.pitch; 
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+            s.source.priority = s.priority;
         }
     }
-
+    private void Start()
+    {
+        Play("Theme");
+    }
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, Sound => Sound.name == name);

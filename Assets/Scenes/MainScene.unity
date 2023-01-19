@@ -2295,56 +2295,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &678361756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 678361758}
-  - component: {fileID: 678361757}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &678361757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678361756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc32f03114f3a1945817a6487b35d392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Walking
-    clip: {fileID: 8300000, guid: cb34599aeb7b24c4db45408a1522c12f, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  isPlaying: 0
---- !u!4 &678361758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678361756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.394815, y: 4.103073, z: -120.20215}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734369740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,7 +3047,7 @@ Transform:
   - {fileID: 1020033438}
   - {fileID: 1483869705}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082658312
 GameObject:
@@ -5421,7 +5371,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2affe65993a03914cbf9a128b70991e0, type: 2}
+  - {fileID: 2100000, guid: 2affe65993a03914cbf9a128b70991e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5603,7 +5554,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.007
+      scalar: 0.02
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5657,7 +5608,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.1321423, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5719,7 +5670,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.0005
+      scalar: 0.0002
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6300,7 +6251,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2000
+      scalar: 2500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6730,7 +6681,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -6738,7 +6689,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0.23270434, g: 0.31552255, b: 1, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -9360,13 +9311,13 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     mode: 0
     ratio: 1
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9416,7 +9367,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
+    minVertexDistance: 0
     textureMode: 0
     ribbonCount: 1
     shadowBias: 0.5
@@ -9432,7 +9383,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.23270434, g: 0.41748333, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9494,7 +9445,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9548,7 +9499,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.21383637, g: 0.4846619, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11014,6 +10965,103 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &2065471140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3579354
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -153.36594
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614856, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614858, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: isPlaying
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb34599aeb7b24c4db45408a1522c12f, type: 3}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 0.787
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172896799444614859, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
+      propertyPath: sounds.Array.data[1].priority
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60ef16b19bd92934f9121804f18958ab, type: 3}
 --- !u!1 &2077736566
 GameObject:
   m_ObjectHideFlags: 0
