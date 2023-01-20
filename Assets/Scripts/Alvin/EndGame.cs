@@ -4,11 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour
 {
-    public GameObject[] enemies;
-
-
-
-
     //Här gör jag en collison så när gubben som har taggen player coliderar med ett gameobject som har taggen player så destroyas greta och loadar scene 2 i builden.
     public void OnCollisionEnter2D(Collision2D collision) 
     {
@@ -18,27 +13,20 @@ public class EndGame : MonoBehaviour
             Destroy(gameObject);
         }
         //^^
-      
-        
-        // (ONÖDIG då vi har annat vinn system) Här gör jag en collison så när gubben som har taggen Win coliderar med ett gameobject som har taggen player så kommer det upp en win scene.
+        //Här gör jag en collison så när gubben som har taggen Win coliderar med ett gameobject som har taggen player så kommer det upp en  och loadar scene 2 i builden.
         else if (collision.gameObject.tag == "Win")
         {
             SceneManager.LoadScene(3);
             Destroy(gameObject);
         }
     }
-         //^^
+    //^^
 
 
 
     public void WinGame() // Funktion som heter Wingame.
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy"); // letar efter saker med tagg Enemy. 
-        if (enemies.Length == 0)
-        {
-            SceneManager.LoadScene("GameWon"); // Laddar in i vinn scenen
-        }
-
+        SceneManager.LoadScene(3); // Laddar Scene 3 i builden.
     }
     public void Die() //funktion som är att dö
     {
