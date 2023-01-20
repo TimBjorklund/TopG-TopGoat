@@ -23,6 +23,14 @@ public class Boss : MonoBehaviour
     private GameObject box1;
     private GameObject box2;
     private GameObject box3;
+    [SerializeField]
+    private Transform groundCheck;
+    [SerializeField]
+    private LayerMask groundLayer;
+
+    public bool AndrewGround1;
+    public bool AndrewGround2;
+    public bool AndrewGround3;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +44,6 @@ public class Boss : MonoBehaviour
     float timer4;
     void Update()
     {
-        timer4 += Time.deltaTime;
-        if (timer4 >=7)
-        {
-            r2d.velocity = new Vector2( 4, 25);
-            timer4 = 0;
-        }
         jumpAttackTimer += Time.deltaTime;
         if (stageOne == true)
         {
@@ -56,79 +58,94 @@ public class Boss : MonoBehaviour
 
         else if (stageOne == false)
         {
-            if (jumpAttackTimer >= 5)
+            if (jumpAttackTimer >= 7)
             {
                 if (playerInBox == 1)
                 {
                     if (andrewInBox == 1)
                     {
+                        //Dune
                         r2d.velocity = new Vector2(r2d.velocity.x, 25);
                     }
                     else if (andrewInBox == 2)
                     {
-                        r2d.velocity = new Vector2(4, 25);
+                        //Dune
+                        r2d.velocity = new Vector2(-6, 25);
                     }
                     else if (andrewInBox == 3)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box1.transform.position -= box3.transform.position) / 100;
-                        }
+                        //Dune
+                        r2d.velocity = new Vector2(-13, 25);
                     }
                 }
                 else if(playerInBox == 2)
                 {
                     if (andrewInBox == 1)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box2.transform.position -= box1.transform.position) / 100;
-                        }
+                        //Dune
+                        r2d.velocity = new Vector2(7, 25);
                     }
                     else if (andrewInBox == 2)
                     {
+                        //Dune
                         r2d.velocity = new Vector2(r2d.velocity.x, 25);
                     }
                     else if (andrewInBox == 3)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box2.transform.position -= box3.transform.position) / 100;
-                        }
+                        //Dune
+                        r2d.velocity = new Vector2(-7, 25);
                     }
                 }
                 else if(playerInBox == 3)
                 {
                     if (andrewInBox == 1)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box3.transform.position -= box1.transform.position) / 100;
-                        }
+                        //Dune
+                        r2d.velocity = new Vector2(13, 25);
                     }
                     else if (andrewInBox == 2)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box3.transform.position -= box2.transform.position) / 100;
-                        }
+                        //Dune
+                        r2d.velocity = new Vector2(6, 25);
                     }
                     else if (andrewInBox == 3)
                     {
+                        //Dune
                         r2d.velocity = new Vector2(r2d.velocity.x, 25);
-
                     }
                 }
+                jumpAttackTimer = 0;
             }
         }
         else
         {
             Debug.Log("Uuuuuuuuhh, something wrong here!!!");
+        }
+    }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (stageOne == false)
+        {
+            if (AndrewGround1 == true)
+            {
+                transform.position = new Vector3(-17, transform.position.y, transform.position.z);
+                AndrewGround1 = false;
+            }
+            else if (AndrewGround2 == true)
+            {
+
+                AndrewGround2 = false;
+            }
+            else if (AndrewGround3 == true)
+            {
+
+                AndrewGround3 = false;
+            }
+
         }
     }
 }
