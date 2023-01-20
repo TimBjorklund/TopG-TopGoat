@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         {
             dubbleJump = false;
 
-            FindObjectOfType<AudioManager>().Play("Jump");
+            //FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetKeyDown(jump))
         {
@@ -125,7 +125,7 @@ public class Player : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
     }
 }
 // Tim.B

@@ -36,10 +36,11 @@ public class Boss : MonoBehaviour
     float timer4;
     void Update()
     {
-        timer4 = Time.deltaTime;
-        if (timer4 >=5)
+        timer4 += Time.deltaTime;
+        if (timer4 >=7)
         {
-        r2d.velocity = new Vector2(r2d.velocity.x, 25);
+            r2d.velocity = new Vector2( 4, 25);
+            timer4 = 0;
         }
         jumpAttackTimer += Time.deltaTime;
         if (stageOne == true)
@@ -52,6 +53,7 @@ public class Boss : MonoBehaviour
                 Instantiate(bottlePrefab, arm.transform.position, Quaternion.identity);
             }
         }
+
         else if (stageOne == false)
         {
             if (jumpAttackTimer >= 5)
