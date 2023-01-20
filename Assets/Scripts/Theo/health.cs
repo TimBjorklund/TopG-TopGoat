@@ -22,6 +22,9 @@ public class health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            Invoke("die", 0.7f);
+            anim.SetTrigger("die");
         }
+
     }
 }
