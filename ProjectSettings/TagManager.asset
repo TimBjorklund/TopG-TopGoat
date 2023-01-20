@@ -8,6 +8,11 @@ TagManager:
   - TowardsPosition
   - Bottle
   - AndrewAim
+  - Boomerang
+  - Box1
+  - Box2
+  - Box3
+  - Andrew
   layers:
   - Default
   - TransparentFX
