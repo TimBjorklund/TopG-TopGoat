@@ -53,13 +53,10 @@ public class Player : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+            
             animator.SetBool("isRunning", true);
             sp.flipX = true;
 
-            if (AudioManager.instance.isPlaying == false)
-            {
-                AudioManager.instance.Play("Walking");
-            }    
         }
         else if (Input.GetKey(right))
         {
@@ -67,10 +64,10 @@ public class Player : MonoBehaviour
             animator.SetBool("isRunning", true);
             sp.flipX = false;
 
-            if (AudioManager.instance.isPlaying == false)
-            {
-                AudioManager.instance.Play("Walking");
-            }
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
         if (Input.GetKeyDown(shoot))
         {
@@ -98,21 +95,21 @@ public class Player : MonoBehaviour
                 dubbleJump = !dubbleJump;
                 Debug.Log("JUUUUUMP");
 
-                FindObjectOfType<AudioManager>().Play("Jump");
-
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.Play("Jump");
+                }
+                
+                animator.SetTrigger("Jump");
             }
-            animator.SetTrigger("Jump");
+            
         }
         if (Input.GetKeyUp(jump) && r2d.velocity.y > 0f)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
         }
 
-        if(r2d.velocity.x == 0)
-        {
-            animator.SetBool("isRunning", false);
-        }
-
+       
 
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;

@@ -91272,7 +91272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &239132546
 Transform:
   m_ObjectHideFlags: 0
@@ -93838,6 +93838,11 @@ PrefabInstance:
       objectReference: {fileID: 2058174367}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
+--- !u!95 &1114653414 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7852154938416983360, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
+  m_PrefabInstance: {fileID: 1114653413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134433646
 GameObject:
   m_ObjectHideFlags: 0
@@ -100895,7 +100900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5acb3d34c331914da923ca25168c36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1114653414}
   slider: {fileID: 2058174368}
   gradient:
     serializedVersion: 2
