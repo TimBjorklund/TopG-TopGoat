@@ -93551,7 +93551,7 @@ Transform:
   - {fileID: 1020033438}
   - {fileID: 1483869705}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1097718102
 PrefabInstance:
@@ -93832,6 +93832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7852154937163523067, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 2058174367}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
 --- !u!1 &1134433646
