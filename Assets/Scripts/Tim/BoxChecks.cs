@@ -56,9 +56,17 @@ public class BoxChecks : MonoBehaviour
                 boss.andrewInBox = 3;
                 Debug.Log("Andrew in box 3");
             }
-            else
+            if (gameObject.name == "Ground (1)")
             {
-                Debug.Log("Somthing wrong in BoxChacks");
+                boss.AndrewGround1 = true;
+            }
+            else if (gameObject.name == "Ground (2)")
+            {
+                boss.AndrewGround2 = true;
+            }
+            else if (gameObject.name == "Ground (3)")
+            {
+                boss.AndrewGround3 = true;
             }
         }
     }
