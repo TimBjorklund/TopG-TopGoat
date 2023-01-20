@@ -41,10 +41,11 @@ public class Healthbar : MonoBehaviour
 
     public void TakeDamage(float damage) //i denna funktion gör vi så att health minskas och att slidervalue minskas och då sätter vi sethelth till nuvarande hpn.
     {
+        animator.SetTrigger("Hurt");
         health -= damage;
         slider.value -= damage;
         SetHealth(health);
-        animator.SetTrigger("Hurt");
+        
 
     }
 
@@ -58,8 +59,9 @@ public class Healthbar : MonoBehaviour
         if (health <= 0) //om hp är mindre än ELLER LIKA MED 0
         {
              Invoke("die", 2f);
+             animator.SetTrigger("Die");
         }
-        animator.SetTrigger("Die");
+        
 
     }
 }
