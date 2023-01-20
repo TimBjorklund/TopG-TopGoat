@@ -8,6 +8,11 @@ TagManager:
   - TowardsPosition
   - Bottle
   - AndrewAim
+  - Boomerang
+  - Box1
+  - Box2
+  - Box3
+  - Andrew
   layers:
   - Default
   - TransparentFX
@@ -44,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Second Layer
+    uniqueID: 1669355443
     locked: 0
