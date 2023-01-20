@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         {
             dubbleJump = false;
 
-            FindObjectOfType<AudioManager>().Play("Jump");
+            //FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetKeyDown(jump))
         {
