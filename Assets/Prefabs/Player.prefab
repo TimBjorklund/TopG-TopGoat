@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7852154937163523057}
   m_LocalRotation: {x: 0, y: 0, z: -0.000004512585, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 6.192131, y: 0.07000641, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 7852154937317820297}
@@ -145,7 +145,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   jumpPower: 7
-  dubbleJump: 1
+  dubbleJump: 0
   weaponPrefab: {fileID: 8963027864426437535, guid: be45664e86e7712469acfa37a684f333, type: 3}
   haveWeapon: 1
   speed: 6
@@ -525,7 +525,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7852154937839847274}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.49611357, y: -0.5038564, z: -0.49611357, w: 0.5038565}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -635,9 +635,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7772591168554664384, guid: 743e130c65598fc4781ab5271d12f480, type: 3}
+  m_Sprite: {fileID: 7910996124493231684, guid: 743e130c65598fc4781ab5271d12f480, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 0.64}

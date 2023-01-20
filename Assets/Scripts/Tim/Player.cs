@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     GameObject lookAt;
 
     public float range = 4;
-    public Healthbar healthbar;
+    public Healthbar healthbar; 
 
 
     // Start is called before the first frame update
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move Left
+
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
@@ -61,7 +61,6 @@ public class Player : MonoBehaviour
                 AudioManager.instance.Play("Walking");
             }    
         }
-        //Move Right
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
@@ -73,7 +72,6 @@ public class Player : MonoBehaviour
                 AudioManager.instance.Play("Walking");
             }
         }
-        //Shoot
         if (Input.GetKeyDown(shoot))
         {
             if (haveWeapon == true)
@@ -83,12 +81,12 @@ public class Player : MonoBehaviour
             }
             animator.SetTrigger("Throw");
         }
-        //can you Jump?
+
         if (IsGrounded() && !Input.GetKey(jump))
         {
             dubbleJump = false;
 
-            //FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetKeyDown(jump))
         {
@@ -122,8 +120,6 @@ public class Player : MonoBehaviour
         lookAtPosition = new Vector3(worldMousePosition.x, worldMousePosition.y, 0);
         lookAt.transform.LookAt(lookAtPosition);
 
-
-        print("test");
 
         Vector3 direction = Vector3.forward;
         Ray playerRay = new Ray(transform.position, transform.TransformDirection(direction * range));
