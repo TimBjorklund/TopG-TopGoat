@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Animator animator;
+    public SpriteRenderer sp;
+
     [SerializeField]
     KeyCode left;
     [SerializeField]
@@ -40,6 +43,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
+      
     }
 
     // Update is called once per frame
@@ -49,16 +53,31 @@ public class Player : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+<<<<<<< Updated upstream
+=======
+            animator.SetBool("isRunning", true);
+            sp.flipX = true;
+
+>>>>>>> Stashed changes
             if (AudioManager.instance.isPlaying == false)
             {
                 AudioManager.instance.Play("Walking");
-            }
-            
+            }    
         }
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+<<<<<<< Updated upstream
 
+=======
+            animator.SetBool("isRunning", true);
+            sp.flipX = false;
+
+            if (AudioManager.instance.isPlaying == false)
+            {
+                AudioManager.instance.Play("Walking");
+            }
+>>>>>>> Stashed changes
         }
         if (Input.GetKeyDown(shoot))
         {
@@ -67,6 +86,7 @@ public class Player : MonoBehaviour
                 Instantiate(weaponPrefab, transform.position, Quaternion.identity);
                 haveWeapon = false;
             }
+            animator.SetTrigger("Throw");
         }
 
         if (IsGrounded() && !Input.GetKey(jump))
@@ -88,10 +108,16 @@ public class Player : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Jump");
 
             }
+            animator.SetTrigger("Jump");
         }
         if (Input.GetKeyUp(jump) && r2d.velocity.y > 0f)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
+        }
+
+        if(r2d.velocity.x == 0)
+        {
+            animator.SetBool("isRunning", false);
         }
 
 
