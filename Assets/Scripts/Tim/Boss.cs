@@ -66,11 +66,7 @@ public class Boss : MonoBehaviour
                     }
                     else if (andrewInBox == 2)
                     {
-                        r2d.velocity = new Vector2(r2d.velocity.x, 25);
-                        for (int i = 0; i < 100; i++)
-                        {
-                            transform.position += (box1.transform.position -= box2.transform.position)/100;
-                        }
+                        r2d.velocity = new Vector2(4, 25);
                     }
                     else if (andrewInBox == 3)
                     {

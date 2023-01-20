@@ -132,8 +132,6 @@ MonoBehaviour:
   startingPos: {x: 0, y: 0, z: 0}
   aim: {fileID: 0}
   currentForce: {x: 0, y: 0, z: 0}
-  gravity: 0
-  Mass: 0
 --- !u!114 &-3040075997429783749
 MonoBehaviour:
   m_ObjectHideFlags: 0
