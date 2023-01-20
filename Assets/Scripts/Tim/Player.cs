@@ -53,12 +53,9 @@ public class Player : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
-<<<<<<< Updated upstream
-=======
             animator.SetBool("isRunning", true);
             sp.flipX = true;
 
->>>>>>> Stashed changes
             if (AudioManager.instance.isPlaying == false)
             {
                 AudioManager.instance.Play("Walking");
@@ -67,9 +64,6 @@ public class Player : MonoBehaviour
         else if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-<<<<<<< Updated upstream
-
-=======
             animator.SetBool("isRunning", true);
             sp.flipX = false;
 
@@ -77,7 +71,6 @@ public class Player : MonoBehaviour
             {
                 AudioManager.instance.Play("Walking");
             }
->>>>>>> Stashed changes
         }
         if (Input.GetKeyDown(shoot))
         {
