@@ -75,8 +75,9 @@ public class Player : MonoBehaviour
             {
                 Instantiate(weaponPrefab, transform.position, Quaternion.identity);
                 haveWeapon = false;
+                animator.SetTrigger("Throw");
             }
-            animator.SetTrigger("Throw");
+            
         }
 
         if (IsGrounded() && !Input.GetKey(jump))
