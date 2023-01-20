@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Healthbar : MonoBehaviour
 {
+    public Animator animator;
     public Slider slider;
     public Gradient gradient;
     public Image fill;
@@ -43,6 +44,7 @@ public class Healthbar : MonoBehaviour
         health -= damage;
         slider.value -= damage;
         SetHealth(health);
+        animator.SetTrigger("Hurt");
 
     }
 
@@ -55,8 +57,9 @@ public class Healthbar : MonoBehaviour
     {
         if (health <= 0) //om hp är mindre än ELLER LIKA MED 0
         {
-             Invoke("die", 0.7f);
+             Invoke("die", 2f);
         }
+        animator.SetTrigger("Die");
 
     }
 }
