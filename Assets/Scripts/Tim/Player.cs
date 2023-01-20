@@ -75,8 +75,9 @@ public class Player : MonoBehaviour
             {
                 Instantiate(weaponPrefab, transform.position, Quaternion.identity);
                 haveWeapon = false;
+                animator.SetTrigger("Throw");
             }
-            animator.SetTrigger("Throw");
+            
         }
 
         if (IsGrounded() && !Input.GetKey(jump))
@@ -90,6 +91,7 @@ public class Player : MonoBehaviour
             Debug.Log("at Least trying");
             if (IsGrounded() || dubbleJump == true)
             {
+                animator.SetTrigger("Jump");
 
                 r2d.velocity = new Vector2(r2d.velocity.x, jumpPower);
                 dubbleJump = !dubbleJump;
@@ -98,9 +100,10 @@ public class Player : MonoBehaviour
                 if (AudioManager.instance != null)
                 {
                     AudioManager.instance.Play("Jump");
+                    animator.SetTrigger("Jump");
                 }
                 
-                animator.SetTrigger("Jump");
+                
             }
             
         }
