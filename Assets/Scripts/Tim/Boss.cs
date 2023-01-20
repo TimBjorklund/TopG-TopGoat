@@ -33,8 +33,14 @@ public class Boss : MonoBehaviour
         box3 = GameObject.FindGameObjectWithTag("Box3");
     }
     // Update is called once per frame
+    float timer4;
     void Update()
     {
+        timer4 = Time.deltaTime;
+        if (timer4 >=5)
+        {
+        r2d.velocity = new Vector2(r2d.velocity.x, 25);
+        }
         jumpAttackTimer += Time.deltaTime;
         if (stageOne == true)
         {

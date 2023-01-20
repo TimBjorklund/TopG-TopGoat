@@ -14,18 +14,13 @@ public class Bottle : MonoBehaviour
 
     private Rigidbody2D r2d;
     public Vector3 currentForce;
-    public float gravity;
-    public float Mass;
     // Start is called before the first frame update
     void Start()
     {
-        r2d = gameObject.GetComponent<Rigidbody2D>();
         aim = GameObject.FindGameObjectWithTag("AndrewAim");
         aimedPos = aim.transform.position;
         startingPos = transform.position;
         direction = aimedPos - startingPos;
-        Mass = r2d.mass;
-        gravity = r2d.gravityScale;
         
     }
 
