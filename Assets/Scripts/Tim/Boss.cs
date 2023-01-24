@@ -137,12 +137,12 @@ public class Boss : MonoBehaviour
             }
             else if (AndrewGround2 == true)
             {
-
+                transform.position = new Vector3(0, transform.position.y, transform.position.z);
                 AndrewGround2 = false;
             }
             else if (AndrewGround3 == true)
             {
-
+                transform.position = new Vector3(17, transform.position.y, transform.position.z);
                 AndrewGround3 = false;
             }
 
