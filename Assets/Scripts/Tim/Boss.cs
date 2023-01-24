@@ -14,7 +14,6 @@ public class Boss : MonoBehaviour
     private GameObject arm;
     [SerializeField]
     private GameObject Aim;
-    [SerializeField]
     private GameObject player;
     public bool stageOne = true;
     public int playerInBox = 0;
@@ -31,6 +30,8 @@ public class Boss : MonoBehaviour
     public bool AndrewGround1;
     public bool AndrewGround2;
     public bool AndrewGround3;
+
+    public int currentHealth = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class Boss : MonoBehaviour
     float timer4;
     void Update()
     {
+        print(currentHealth);
         jumpAttackTimer += Time.deltaTime;
         if (stageOne == true)
         {
@@ -53,6 +55,7 @@ public class Boss : MonoBehaviour
             {
                 timer = 0;
                 Instantiate(bottlePrefab, arm.transform.position, Quaternion.identity);
+                Debug.Log("Bottle!");
             }
         }
 
@@ -121,6 +124,18 @@ public class Boss : MonoBehaviour
         {
             Debug.Log("Uuuuuuuuhh, something wrong here!!!");
         }
+        if (currentHealth <= 10)
+        {
+            stageOne = false;
+        }
+        else if (currentHealth <= 0)
+        {
+            Debug.Log("Andrews Dead");
+        }
+        else
+        {
+            stageOne = true;
+        }
     }
     private bool IsGrounded()
     {
@@ -146,6 +161,26 @@ public class Boss : MonoBehaviour
                 AndrewGround3 = false;
             }
 
+        }
+        if (collision.gameObject.tag == "Boomerang")
+        {
+            TakeDamage(1);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth = currentHealth - damage;
+        if (currentHealth <= 10)
+        {
+            stageOne = false;
+        }
+        else if (currentHealth <= 0)
+        {
+            Debug.Log("Andrews Dead");
+        }
+        else
+        {
+            stageOne = true;
         }
     }
 }

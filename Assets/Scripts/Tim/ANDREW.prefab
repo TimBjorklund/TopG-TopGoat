@@ -200,10 +200,14 @@ MonoBehaviour:
   stageOne: 1
   playerInBox: 0
   andrewInBox: 0
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 5697854602600304498}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  AndrewGround1: 0
+  AndrewGround2: 0
+  AndrewGround3: 0
+  currentHealth: 20
 --- !u!50 &6101067
 Rigidbody2D:
   serializedVersion: 4

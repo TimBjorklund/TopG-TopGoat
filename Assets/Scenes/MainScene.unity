@@ -91293,7 +91293,7 @@ Transform:
   - {fileID: 422255049}
   - {fileID: 692847520}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252452364
 GameObject:
@@ -91633,7 +91633,7 @@ Transform:
   m_Children:
   - {fileID: 1959652841}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314060791
 GameObject:
@@ -91646,7 +91646,7 @@ GameObject:
   - component: {fileID: 314060792}
   m_Layer: 6
   m_Name: Byggnadstak
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91752,7 +91752,7 @@ GameObject:
   - component: {fileID: 324448953}
   m_Layer: 6
   m_Name: Spinned
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91991,7 +91991,7 @@ GameObject:
   - component: {fileID: 437907478}
   m_Layer: 6
   m_Name: House 4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92197,7 +92197,7 @@ RectTransform:
   - {fileID: 1108734937}
   - {fileID: 2058174366}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -92299,7 +92299,7 @@ GameObject:
   - component: {fileID: 525870222}
   m_Layer: 6
   m_Name: House 2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92438,7 +92438,7 @@ GameObject:
   - component: {fileID: 539839052}
   m_Layer: 6
   m_Name: House 8
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92566,6 +92566,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6859535808084958384, guid: fbefaaaa5199eed48b2a55ca6994c98b, type: 3}
   m_PrefabInstance: {fileID: 110251916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &659885038
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649354816027097134, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011913873310279619, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
+      propertyPath: m_Name
+      value: Bottle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a264c1d463741e4e8a1fc0f7e3dada4, type: 3}
 --- !u!1 &662738702
 GameObject:
   m_ObjectHideFlags: 0
@@ -92692,7 +92749,7 @@ Transform:
   m_Children:
   - {fileID: 891863196}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692847519
 GameObject:
@@ -92751,7 +92808,7 @@ GameObject:
   - component: {fileID: 751290316}
   m_Layer: 6
   m_Name: House 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93370,7 +93427,7 @@ GameObject:
   - component: {fileID: 906618707}
   m_Layer: 6
   m_Name: House 10 (Boss House)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93692,7 +93749,7 @@ Transform:
   - {fileID: 1483869705}
   - {fileID: 1622327276}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1097718102
 PrefabInstance:
@@ -93947,15 +94004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.76
+      value: 389
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.62
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94049,7 +94106,7 @@ GameObject:
   - component: {fileID: 1134433648}
   m_Layer: 6
   m_Name: House 3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94163,7 +94220,7 @@ Transform:
   - {fileID: 137422603}
   - {fileID: 844228893}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1166414974
 PrefabInstance:
@@ -94242,7 +94299,7 @@ GameObject:
   - component: {fileID: 1178761423}
   m_Layer: 6
   m_Name: House 6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94594,7 +94651,7 @@ Transform:
   - {fileID: 216688205}
   - {fileID: 1943713831}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239267911 stripped
 GameObject:
@@ -95180,7 +95237,7 @@ GameObject:
   - component: {fileID: 1540696231}
   m_Layer: 6
   m_Name: House 7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100711,7 +100768,7 @@ Transform:
   m_LocalScale: {x: 245.21857, y: 227.04959, z: 1431.9224}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 89.252, y: 0, z: 0}
 --- !u!1 &1799892604
 GameObject:
@@ -100899,7 +100956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1808294331 stripped
 Transform:
@@ -100948,7 +101005,7 @@ Transform:
   - {fileID: 1206992981}
   - {fileID: 47138722}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909569044
 GameObject:
@@ -101227,7 +101284,7 @@ GameObject:
   - component: {fileID: 1960723450}
   m_Layer: 6
   m_Name: House 5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101494,7 +101551,7 @@ GameObject:
   - component: {fileID: 2061808353}
   m_Layer: 6
   m_Name: House 9
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101674,7 +101731,7 @@ GameObject:
   - component: {fileID: 2082344448}
   m_Layer: 6
   m_Name: Spinned
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101731,7 +101788,7 @@ GameObject:
   - component: {fileID: 2137686394}
   m_Layer: 6
   m_Name: Spinned
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
