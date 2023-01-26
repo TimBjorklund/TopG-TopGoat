@@ -145,19 +145,22 @@ public class Boss : MonoBehaviour
     {
         if (stageOne == false)
         {
-            if (AndrewGround1 == true)
+            if (collision.gameObject.name == "GroundCheck (1)" && jumpAttackTimer >= 2)
             {
-                transform.position = new Vector3(-17, transform.position.y, transform.position.z);
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(390, transform.position.y, transform.position.z);
                 AndrewGround1 = false;
             }
-            else if (AndrewGround2 == true)
+            else if (collision.gameObject.name == "GroundCheck (2)" && jumpAttackTimer >= 2)
             {
-                transform.position = new Vector3(0, transform.position.y, transform.position.z);
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(406, transform.position.y, transform.position.z);
                 AndrewGround2 = false;
             }
-            else if (AndrewGround3 == true)
+            else if (collision.gameObject.name == "GroundCheck (3)" && jumpAttackTimer >= 2)
             {
-                transform.position = new Vector3(17, transform.position.y, transform.position.z);
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(423, transform.position.y, transform.position.z);
                 AndrewGround3 = false;
             }
 
