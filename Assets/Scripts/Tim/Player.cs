@@ -129,6 +129,7 @@ public class Player : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
+        //return Physics2D.OverlapBox(groundCheck.position);
     }
 }
 // Tim.B

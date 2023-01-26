@@ -42,7 +42,7 @@ public class MouseCamera : MonoBehaviour
         {
             diffPos.y = -7;
         }
-        diffPos.z = -10;
+        diffPos.z = -10*Strength;
         gameObject.transform.position = player.transform.position + (diffPos / Strength);
 
     }
