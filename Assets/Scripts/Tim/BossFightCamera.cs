@@ -13,6 +13,10 @@ public class BossFightCamera : MonoBehaviour
     [SerializeField, Range(1,10)]
     private float moveTime = 1;
     private Vector3 velocity;
+    [SerializeField]
+    private GameObject background;
+    [SerializeField]
+    private GameObject playerBackground;
     // Start is called before the first frame update
     void Start()
     {        playerCamera.enabled = true;
@@ -27,11 +31,26 @@ public class BossFightCamera : MonoBehaviour
         if (boss.playerInBox == 1 && playedOnce == false)
         {
             gameObject.transform.position = playerCameraT.position;
+            playerCamera.enabled = false;
+            bossCamera.enabled = true;
+            playerBackground.SetActive(false);
             playedOnce = true;
         }
         else if (playedOnce == true)
         {
-            gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, new Vector3(406, 10, -10), ref velocity, moveTime);
+            gameObject.transform.position = Vector3.SmoothDamp(gameObject.transform.position, new Vector3(406, 15, -10), ref velocity, moveTime);
+            if (bossCamera.orthographicSize < 15)
+            {
+                bossCamera.orthographicSize += 0.03f;
+            }
+            else if (bossCamera.orthographicSize > 15)
+            {
+                bossCamera.orthographicSize = 15;
+            }
+            if (background.transform.localScale.x < 8.6 || background.transform.localScale.y < 8.6)
+            {
+                background.transform.localScale += new Vector3(0.018f, 0.018f, 0f);
+            }
         }
     }
 }
