@@ -97856,7 +97856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6756331803949814154, guid: 5bd3d3d8cfe426247bfe164b57b7eaec, type: 3}
       propertyPath: currentHealth
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6756331803949814155, guid: 5bd3d3d8cfe426247bfe164b57b7eaec, type: 3}
       propertyPath: m_Name
