@@ -14,7 +14,6 @@ public class Boss : MonoBehaviour
     private GameObject arm;
     [SerializeField]
     private GameObject Aim;
-    [SerializeField]
     private GameObject player;
     public bool stageOne = true;
     public int playerInBox = 0;
@@ -31,6 +30,8 @@ public class Boss : MonoBehaviour
     public bool AndrewGround1;
     public bool AndrewGround2;
     public bool AndrewGround3;
+
+    public int currentHealth = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class Boss : MonoBehaviour
     float timer4;
     void Update()
     {
+        print(currentHealth);
         jumpAttackTimer += Time.deltaTime;
         if (stageOne == true)
         {
@@ -53,6 +55,7 @@ public class Boss : MonoBehaviour
             {
                 timer = 0;
                 Instantiate(bottlePrefab, arm.transform.position, Quaternion.identity);
+                Debug.Log("Bottle!");
             }
         }
 
@@ -121,6 +124,18 @@ public class Boss : MonoBehaviour
         {
             Debug.Log("Uuuuuuuuhh, something wrong here!!!");
         }
+        if (currentHealth <= 10)
+        {
+            stageOne = false;
+        }
+        else if (currentHealth <= 0)
+        {
+            Debug.Log("Andrews Dead");
+        }
+        else
+        {
+            stageOne = true;
+        }
     }
     private bool IsGrounded()
     {
@@ -130,22 +145,45 @@ public class Boss : MonoBehaviour
     {
         if (stageOne == false)
         {
-            if (AndrewGround1 == true)
+            if (collision.gameObject.name == "GroundCheck (1)" && jumpAttackTimer >= 2)
             {
-                transform.position = new Vector3(-17, transform.position.y, transform.position.z);
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(390, transform.position.y, transform.position.z);
                 AndrewGround1 = false;
             }
-            else if (AndrewGround2 == true)
+            else if (collision.gameObject.name == "GroundCheck (2)" && jumpAttackTimer >= 2)
             {
-
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(406, transform.position.y, transform.position.z);
                 AndrewGround2 = false;
             }
-            else if (AndrewGround3 == true)
+            else if (collision.gameObject.name == "GroundCheck (3)" && jumpAttackTimer >= 2)
             {
-
+                r2d.velocity = new Vector2(0, 0);
+                transform.position = new Vector3(423, transform.position.y, transform.position.z);
                 AndrewGround3 = false;
             }
 
+        }
+        if (collision.gameObject.tag == "Boomerang")
+        {
+            TakeDamage(1);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth = currentHealth - damage;
+        if (currentHealth <= 10)
+        {
+            stageOne = false;
+        }
+        else if (currentHealth <= 0)
+        {
+            Debug.Log("Andrews Dead");
+        }
+        else
+        {
+            stageOne = true;
         }
     }
 }

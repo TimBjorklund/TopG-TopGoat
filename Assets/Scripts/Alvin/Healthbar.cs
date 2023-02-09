@@ -33,9 +33,9 @@ public class Healthbar : MonoBehaviour
 
     public void SetHealth(float health2)  //funktion som gör att healthbaren anpassas efter hp 
     {
-        slider.value = health; 
+        slider.value = health; //Värdet av vår slider som är 4 i detta fall är samma som Hp
 
-        fill.color = gradient.Evaluate(slider.normalizedValue); //fyll i 
+        fill.color = gradient.Evaluate(slider.normalizedValue); //fyll i färgerna vi valde i gradienten i unity
         Debug.Log("anpassning till bar");
     }
 
@@ -56,7 +56,7 @@ public class Healthbar : MonoBehaviour
     }
     void Update()
     {
-        if (health <= 0) //om hp är mindre än ELLER LIKA MED 0
+        if (health <= 0) //om hp är mindre än elr lika med 0
         {
              Invoke("die", 2f);
              animator.SetTrigger("Die");
