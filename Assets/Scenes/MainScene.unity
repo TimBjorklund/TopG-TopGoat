@@ -97855,8 +97855,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6756331803949814154, guid: 5bd3d3d8cfe426247bfe164b57b7eaec, type: 3}
+      propertyPath: bossCamera
+      value: 
+      objectReference: {fileID: 1129824248}
+    - target: {fileID: 6756331803949814154, guid: 5bd3d3d8cfe426247bfe164b57b7eaec, type: 3}
       propertyPath: currentHealth
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6756331803949814155, guid: 5bd3d3d8cfe426247bfe164b57b7eaec, type: 3}
       propertyPath: m_Name
@@ -98965,11 +98969,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 368.8
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 8.4
       objectReference: {fileID: 0}
     - target: {fileID: 7852154937163523062, guid: 0074da0664e4f5b49bcec7ae3033b0cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -99062,9 +99066,10 @@ GameObject:
   - component: {fileID: 1129824250}
   - component: {fileID: 1129824249}
   - component: {fileID: 1129824252}
+  - component: {fileID: 1129824253}
   m_Layer: 0
   m_Name: Boss Camera
-  m_TagString: Untagged
+  m_TagString: Boss Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99153,6 +99158,21 @@ MonoBehaviour:
   moveTime: 2.5
   background: {fileID: 161214942}
   playerBackground: {fileID: 692480045}
+--- !u!114 &1129824253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129824248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a37c270a6a4b94b96f502508e2d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
+  Radius: 0.2
+  start: 0
 --- !u!1 &1134433646
 GameObject:
   m_ObjectHideFlags: 0
