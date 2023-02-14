@@ -31,6 +31,8 @@ public class Boss : MonoBehaviour
     public bool AndrewGround2;
     public bool AndrewGround3;
 
+    public bool bossFightStart = false;
+
     public int currentHealth = 20;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class Boss : MonoBehaviour
         box1 = GameObject.FindGameObjectWithTag("Box1");
         box2 = GameObject.FindGameObjectWithTag("Box2");
         box3 = GameObject.FindGameObjectWithTag("Box3");
+
     }
     // Update is called once per frame
     float timer4;
@@ -47,7 +50,7 @@ public class Boss : MonoBehaviour
     {
         print(currentHealth);
         jumpAttackTimer += Time.deltaTime;
-        if (stageOne == true)
+        if (stageOne == true && bossFightStart == true)
         {
             arm.transform.LookAt(player.transform.position);
             timer += Time.deltaTime;

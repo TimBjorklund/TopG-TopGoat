@@ -17,9 +17,11 @@ public class BossFightCamera : MonoBehaviour
     private GameObject background;
     [SerializeField]
     private GameObject playerBackground;
+    bool bossStartBattle = false;
     // Start is called before the first frame update
     void Start()
-    {        playerCamera.enabled = true;
+    {        
+        playerCamera.enabled = true;
         bossCamera.enabled = false;
         boss = FindObjectOfType<Boss>();
         velocity = Vector3.zero;
@@ -30,6 +32,7 @@ public class BossFightCamera : MonoBehaviour
     {
         if (boss.playerInBox == 1 && playedOnce == false)
         {
+            boss.bossFightStart = true;
             gameObject.transform.position = playerCameraT.position;
             playerCamera.enabled = false;
             bossCamera.enabled = true;
