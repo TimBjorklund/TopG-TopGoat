@@ -95741,7 +95741,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -106681,17 +106681,17 @@ MonoBehaviour:
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0.037307262, a: 1}
-    key1: {r: 0.9632523, g: 1, b: 0, a: 1}
-    key2: {r: 0.1480751, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
+    key1: {r: 0.96470594, g: 1, b: 0, a: 1}
+    key2: {r: 0.9632523, g: 1, b: 0, a: 0}
+    key3: {r: 0.1480751, g: 1, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 22552
-    ctime1: 49922
-    ctime2: 65535
-    ctime3: 0
+    ctime0: 0
+    ctime1: 30840
+    ctime2: 42405
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -106704,12 +106704,12 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 3
+    m_Mode: 0
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   fill: {fileID: 1183658898}
   health: 4
-  maxHealth: 4
+  maxHealth: 8
   damage: 1
   healthbar: {fileID: 2058174367}
 --- !u!114 &2058174368
@@ -106757,7 +106757,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 4
+  m_MaxValue: 8
   m_WholeNumbers: 0
   m_Value: 4
   m_OnValueChanged:

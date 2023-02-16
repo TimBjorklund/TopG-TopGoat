@@ -14,6 +14,7 @@ public class Bottle : MonoBehaviour
 
     private Rigidbody2D r2d;
     public Vector3 currentForce;
+    Healthbar healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class Bottle : MonoBehaviour
         aimedPos = aim.transform.position;
         startingPos = transform.position;
         direction = aimedPos - startingPos;
-        
+        healthbar = FindObjectOfType<Healthbar>();
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class Bottle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            healthbar.TakeDamage(1);
             Destroy(gameObject);
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private Rigidbody2D r2d;
+    Healthbar healthbar;
     private float timer;
     [SerializeField]
     private GameObject bottlePrefab;
@@ -33,6 +34,8 @@ public class Boss : MonoBehaviour
 
     public bool bossFightStart = false;
 
+
+
     public int currentHealth = 20;
     // Start is called before the first frame update
     void Start()
@@ -40,8 +43,7 @@ public class Boss : MonoBehaviour
         r2d = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         cameraShake = bossCamera.GetComponent<CameraShake>();
-
-
+        healthbar = FindObjectOfType<Healthbar>();
     }
     // Update is called once per frame
     float timer4;
@@ -153,6 +155,10 @@ public class Boss : MonoBehaviour
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(390, transform.position.y, transform.position.z);
                 AndrewGround1 = false;
+                if (playerInBox == 1)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
             else if (collision.gameObject.name == "GroundCheck (2)" && jumpAttackTimer >= 2)
             {
@@ -160,6 +166,10 @@ public class Boss : MonoBehaviour
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(406, transform.position.y, transform.position.z);
                 AndrewGround2 = false;
+                if (playerInBox == 2)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
             else if (collision.gameObject.name == "GroundCheck (3)" && jumpAttackTimer >= 2)
             {
@@ -167,6 +177,10 @@ public class Boss : MonoBehaviour
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(423, transform.position.y, transform.position.z);
                 AndrewGround3 = false;
+                if (playerInBox == 3)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
 
         }
