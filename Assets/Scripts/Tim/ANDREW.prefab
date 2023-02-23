@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039046814668969644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 14, z: 1}
+  m_LocalPosition: {x: -0.698, y: -0.1842, z: 0}
+  m_LocalScale: {x: 9.385127, y: 6.900768, z: 1}
   m_Children: []
   m_Father: {fileID: 6756331803949814157}
   m_RootOrder: 1
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  m_Sprite: {fileID: 6290565057199974107, guid: 3bffd1ed1a138bc49ae8c2e59db970d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,10 +196,10 @@ MonoBehaviour:
   throwDelay: 5
   arm: {fileID: 6756331803409866099}
   Aim: {fileID: 6756331804277798236}
-  player: {fileID: 0}
   stageOne: 1
   playerInBox: 0
   andrewInBox: 0
+  bossCamera: {fileID: 0}
   groundCheck: {fileID: 5697854602600304498}
   groundLayer:
     serializedVersion: 2
@@ -207,6 +207,7 @@ MonoBehaviour:
   AndrewGround1: 0
   AndrewGround2: 0
   AndrewGround3: 0
+  bossFightStart: 0
   currentHealth: 20
 --- !u!50 &6101067
 Rigidbody2D:

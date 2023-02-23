@@ -5,6 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private Rigidbody2D r2d;
+    Healthbar healthbar;
     private float timer;
     [SerializeField]
     private GameObject bottlePrefab;
@@ -19,9 +20,9 @@ public class Boss : MonoBehaviour
     public int playerInBox = 0;
     public int andrewInBox = 0;
     private float jumpAttackTimer = 0;
-    private GameObject box1;
-    private GameObject box2;
-    private GameObject box3;
+    private CameraShake cameraShake;
+    [SerializeField]
+    private GameObject bossCamera;
     [SerializeField]
     private Transform groundCheck;
     [SerializeField]
@@ -31,15 +32,18 @@ public class Boss : MonoBehaviour
     public bool AndrewGround2;
     public bool AndrewGround3;
 
+    public bool bossFightStart = false;
+
+
+
     public int currentHealth = 20;
     // Start is called before the first frame update
     void Start()
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        box1 = GameObject.FindGameObjectWithTag("Box1");
-        box2 = GameObject.FindGameObjectWithTag("Box2");
-        box3 = GameObject.FindGameObjectWithTag("Box3");
+        cameraShake = bossCamera.GetComponent<CameraShake>();
+        healthbar = FindObjectOfType<Healthbar>();
     }
     // Update is called once per frame
     float timer4;
@@ -47,7 +51,7 @@ public class Boss : MonoBehaviour
     {
         print(currentHealth);
         jumpAttackTimer += Time.deltaTime;
-        if (stageOne == true)
+        if (stageOne == true && bossFightStart == true)
         {
             arm.transform.LookAt(player.transform.position);
             timer += Time.deltaTime;
@@ -147,21 +151,36 @@ public class Boss : MonoBehaviour
         {
             if (collision.gameObject.name == "GroundCheck (1)" && jumpAttackTimer >= 2)
             {
+                cameraShake.start = true;
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(390, transform.position.y, transform.position.z);
                 AndrewGround1 = false;
+                if (playerInBox == 1)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
             else if (collision.gameObject.name == "GroundCheck (2)" && jumpAttackTimer >= 2)
             {
+                cameraShake.start = true;
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(406, transform.position.y, transform.position.z);
                 AndrewGround2 = false;
+                if (playerInBox == 2)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
             else if (collision.gameObject.name == "GroundCheck (3)" && jumpAttackTimer >= 2)
             {
+                cameraShake.start = true;
                 r2d.velocity = new Vector2(0, 0);
                 transform.position = new Vector3(423, transform.position.y, transform.position.z);
                 AndrewGround3 = false;
+                if (playerInBox == 3)
+                {
+                    healthbar.TakeDamage(1);
+                }
             }
 
         }
