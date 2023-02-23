@@ -36,16 +36,14 @@ public class Player : MonoBehaviour
     GameObject lookAt;
 
     public float range = 4;
-    public Healthbar healthbar;
-
-    Camera cam;
+    public Healthbar healthbar; 
 
 
     // Start is called before the first frame update
     void Start()
     {
         r2d = gameObject.GetComponent<Rigidbody2D>();
-        cam = FindObjectOfType<Camera>();
+      
     }
 
     // Update is called once per frame
@@ -99,7 +97,7 @@ public class Player : MonoBehaviour
                 dubbleJump = !dubbleJump;
                 Debug.Log("JUUUUUMP");
 
-                if (AudioManager.instance != null)
+                if (AudioManager.instance != null)// om audio manager inte är null så hitta sound jump plus animera jump -Theo 
                 {
                     AudioManager.instance.Play("Jump");
                     animator.SetTrigger("Jump");
@@ -114,13 +112,11 @@ public class Player : MonoBehaviour
             r2d.velocity = new Vector2(r2d.velocity.x, r2d.velocity.y * 0.5f);
         }
 
-        if (cam.enabled == false)
-        {
-            cam = FindObjectOfType<Camera>();
-        }
+       
+
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = -10;
-        worldMousePosition = cam.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0;
+        worldMousePosition = Camera.main.ScreenToWorldPoint(mousePos);
         lookAtPosition = new Vector3(worldMousePosition.x, worldMousePosition.y, 0);
         lookAt.transform.LookAt(lookAtPosition);
 

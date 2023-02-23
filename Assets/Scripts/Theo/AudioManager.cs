@@ -13,19 +13,19 @@ public class AudioManager : MonoBehaviour
     void Awake ()
     {
 
-        if (instance == null)
+        if (instance == null)//om gameobjekt inte finns så gör ett game object 
             instance = this;
             
         else
             {
-                Destroy(gameObject);
+                Destroy(gameObject);// om game object redan finns förstör det
                 return;
             }
         
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);// gör så att gameobject inte förstörs när den går in i en ny scene 
 
-        foreach (Sound s in sounds)
+        foreach (Sound s in sounds)// bara controller på hur ljudet ska låta 
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -38,11 +38,11 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        Play("Theme");
+        Play("Theme");// spelar theme när den startar 
     }
     public void Play (string name)
     {
-        Sound s = Array.Find(sounds, Sound => Sound.name == name);
+        Sound s = Array.Find(sounds, Sound => Sound.name == name);// hittar sound med namn och spelar det
         s.source.Play();
         isPlaying = true;
         Invoke("ResetPlaying",s.clip.length);

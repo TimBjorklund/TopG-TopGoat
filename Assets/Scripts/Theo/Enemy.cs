@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Jag lämnar min dator olåst i en korridor på skolan")]
+    [Header("Jag lämnar min dator olåst i en korridor på skolan")]//mys 
     [SerializeField] private float attackcooldown;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
@@ -31,24 +31,24 @@ public class Enemy : MonoBehaviour
          
         cooldownTimer += Time.deltaTime;
 
-        if (PlayerInSight())
+        if (PlayerInSight())// om spelaren är innom boxen alltså in sight så attack 
         {
             if (cooldownTimer >= attackcooldown)
             {
                 print("attack");
-                cooldownTimer = 0;
-                anim.SetTrigger("melee");
-                health.TakeDamage(1);
+                cooldownTimer = 0;//cooldown 
+                anim.SetTrigger("melee");// animation 
+                health.TakeDamage(1);// attacken gör en damage 
             }
         }
 
         if (enemyPatrol != null)
             enemyPatrol.enabled = !PlayerInSight(); //GÖr så att enemy patrullerar när den inte ser player - Adam
     }
-    private bool PlayerInSight()
+    private bool PlayerInSight()// player in sight 
     {
        Collider2D hit = Physics2D.OverlapBox(boxCoxColider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-        new Vector3(boxCoxColider.bounds.size.x * range, boxCoxColider.bounds.size.y, boxCoxColider.bounds.size.z), 0, PlayerLayer);
+        new Vector3(boxCoxColider.bounds.size.x * range, boxCoxColider.bounds.size.y, boxCoxColider.bounds.size.z), 0, PlayerLayer);// formen p player in shigt 
 
         if (hit != null)
         {
@@ -76,3 +76,5 @@ public class Enemy : MonoBehaviour
     }
 }
 
+// Theo
+// Adam 
